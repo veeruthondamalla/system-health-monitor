@@ -1,0 +1,62 @@
+<mat-toolbar color="white">
+    <mat-toolbar-row>
+        <div [ngStyle]="getburger()" class="logowrapper">
+            <mat-icon class="toolbar-icon mT5" (click)="menuClick()">menuttt</mat-icon>
+        </div>
+        <div style="width:130px">
+            <img style="width:100%; height:auto" src="http://35.200.207.59/images/logo_w.png" class="logo" />
+
+        </div>
+
+        <div class="ee">
+            <div class="htxt">Hello, <span class="headtxt">{{title}}</span>
+                <p class="day-txt-fnt"> Last updated on {{today | date: 'dd/MM/yyyy'}}
+                </p>
+                <p class="sub-day day-txt-fnt">
+                    {{today | date: 'shortTime'}}
+                </p>
+            </div>
+
+            <div mat-button [matMenuTriggerFor]="menu" class="profile-tab-pic">
+            </div>
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>
+                        <img src="../../assets/images/settting-icon.png" />
+                    </mat-icon>
+                    <span class="menu_txt">settings</span>
+
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>
+                        <img src="../../assets/images/msg_icon.png" />
+                    </mat-icon>                     
+                  <span class="menu_txt">Send Message</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>
+                      <img src="../../assets/images/noticeboard.png" />
+
+                  </mat-icon>
+                  <span class="menu_txt">Noticeboard</span>
+                </button>
+
+            </mat-menu>
+
+
+
+            <div class="logout">
+                <a class="nav-link" href="#">
+                    <span class="logout_txt">Logout <img src="http://35.200.207.59/images/logout.png" />
+                    </span>
+
+                </a>
+
+            </div>
+        </div>
+
+
+
+    </mat-toolbar-row>
+</mat-toolbar>

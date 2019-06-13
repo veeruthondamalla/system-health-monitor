@@ -1,0 +1,87 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <span>Integration Status</span>
+
+                    <div class="col-md-3 pull-right">
+                        <select class="browser-default custom-select">
+                            <option selected>Month/year</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </div>
+                    <div class="col-md-3 pull-right">
+                        <select class="browser-default custom-select">
+                            <option selected>Client</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+
+                    </div>
+
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="svg-container col-md-5">
+                            <!-- <svg width="380" height="346"></svg> -->
+                            <div id="chart" class=""></div>
+
+                            <ul class="list-inline text-center" style="margin-top: -147px;">
+                                <li class="list-inline-item"> <span class="dot" style="background:#f11717"></span> Not Received</li>
+                                <li class="list-inline-item"> <span class="dot" style="background:#b6b6b6"></span> Not Expected</li>
+                                <li class="list-inline-item"> <span class="dot" style="background:#03d54d"></span> Received
+                                </li>
+                            </ul>
+                            <hr/>
+                            <div class="text-center">
+                                <button ngClass="btn telmbtn" (click)="showMore()">
+                                Tell Me More
+                              </button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-7 showmore fadeInRightBig delay-5s ">
+                            <div class="calendr" style="padding-top: 62px;">
+                                <div class="day_wise_transc_title">
+                                    <div class="titldy text-center">Day Wise Transaction Data</div>
+                                    <ul class="list-inline dywis">
+                                        <li class="list-inline-item" *ngFor="let data of data">
+                                            <div>
+                                                {{data.value}}
+
+                                            </div>
+                                            <img src="../../assets/images/correct.png" *ngIf="data.data_status==1" style="height:20px" />
+                                            <img src="../../assets/images/wrong.png" *ngIf="data.data_status==0" style="height:20px" />
+                                            <img src="../../assets/images/dash.png" style="height: 20px;
+                                            position: relative;
+                                            top: -7px;" *ngIf="data.data_status==-1" />
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                            <div class="trend-btn">
+                                <hr/>
+                                <div class="text-center">
+                                    <button class="btn telmbtn trendpos">
+                                    &nbsp; &nbsp; Trend &nbsp; &nbsp;
+                                  </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

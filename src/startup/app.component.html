@@ -1,0 +1,105 @@
+<app-header (onMenuClick)="sidenav.toggle()">
+</app-header>
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav [opened]="opened" disableClose="true" #sidenav mode="side" class="sideNavTheme">
+        <div style="font-weight:600;color: #000000; font-size: 15px; padding-top: 1px; padding-bottom: 7px;margin-left: 37px">
+            Menu
+        </div>
+        <div id='cssmenu'>
+            <ul>
+                <li class='active has-sub'>
+                    <a routerLink="//dashboard">
+                        <span>Integration
+                      <span class="side-title-txt">
+                          <i class="material-icons">
+                              keyboard_arrow_down
+                              </i>
+                      </span>
+
+                        </span>
+                    </a>
+                    <ul>
+                        <li class='has-sub'>
+                            <a href='#'>
+                                <img width="25" src="http://35.200.207.59/healthmo/icon-1.png" />
+                                <span> &nbsp; Integration Status 
+
+                                
+                              </span></a>
+                        </li>
+                        <li class='has-sub'>
+                            <a href='#'>
+                                <span>
+                              <img width="25" src="http://35.200.207.59/healthmo/datastatus.png" /> &nbsp; Data Status
+                            </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class='active has-sub'>
+                    <a href='#'>
+                        <span>Engagement 
+                    <span class="side-title-txt">
+                        <i class="material-icons">
+                            keyboard_arrow_down
+                          </i>
+                    </span>
+                        </span>
+                    </a>
+                    <ul>
+                        <li class='has-sub'>
+                            <a href="#">
+                                <img width="18" src="http://35.200.207.59/healthmo/session.png" /> &nbsp; Session </a>
+
+                        </li>
+                        <li class='has-sub'>
+                            <a href="#">
+                                <img width="20" src="http://35.200.207.59/healthmo/login.png" />&nbsp; Login </a>
+
+                        </li>
+                        <li class='has-sub'>
+                            <a href="#">
+                                <img width="20" src="http://35.200.207.59/healthmo/stickiness.png" />&nbsp; Stickiness </a>
+
+
+                        </li>
+                        <li class='has-sub'>
+                            <a href="#">
+                                <img width="20" src="http://35.200.207.59/healthmo/devices.png" />&nbsp; Devices </a>
+
+                        </li>
+                    </ul>
+                </li>
+                <li class='active has-sub'><a href='#'><span>Tech Infra Utilisation                  
+                     <span class="side-title-txt">
+                    <i class="material-icons">
+                        keyboard_arrow_down
+                      </i>
+                </span>
+</span></a>
+                    <ul>
+                        <li class='has-sub'>
+                            <a href="#">
+                                <img width="25" src="http://35.200.207.59/healthmo/icon-1.png" />&nbsp; Memory/CPU
+                            </a>
+
+                        </li>
+                        <li class='has-sub'>
+                            <a href="#">
+                                <img width="25" src="http://35.200.207.59/healthmo/datastatus.png" />&nbsp; Disk Space</a>
+
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </mat-sidenav>
+
+    <div class="example-sidenav-content" class="contentTheme">
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>

@@ -1,0 +1,39 @@
+<div>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4" *ngFor="let eachkey of objectKeys(data)">
+                    <fieldset class="customLegend">
+                        <legend class="anmated bounceInDown"> {{eachkey | titlecase}}
+                        </legend>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6" *ngFor="let eachkeyvalue of data[eachkey]">
+                                    <a href="#" [routerLink]="[eachkeyvalue.url]">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div>
+
+                                                    {{eachkeyvalue.title | titlecase}}
+                                                </div>
+                                                <div>
+                                                    <img class="img-icon" src="http://35.200.207.59/healthmo/shape.png" />
+                                                    <div class="icon-container">
+                                                        <img class="tt icon-img" [src]="eachkeyvalue.imagepath" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
